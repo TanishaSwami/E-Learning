@@ -1,0 +1,38 @@
+extends ./layout/main.pug
+block link
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css")
+    link(rel="stylesheet", href="/css/swiper-bundle.min.css")
+block content
+    section.contact#contact
+        h1.heading
+            span contact
+            |  us
+        
+        .row
+            .image
+                img(src="/img/Mansplaining-rafiki.svg", alt="#")
+        
+            form(action="/user-contact", method="post")
+                span your name
+                input(type="text", required, placeholder="enter your full name", maxlength="50", name="name", class="box")
+                span your email
+                input(type="email", required, placeholder="enter your valid email", maxlength="50", name="email", class="box")
+                span your number
+                input(type="number", required, placeholder="enter your valid number", min="0", max="99999999999", name="number", class="box", onkeypress="if(this.value.length ==10 ) return flase;")
+                span select course
+                select(name="course", class="box", required)
+                    option(value="", disabled, selected) select the course --
+                    option(value="web_dev") web development
+                    option(value="DSA") DSA
+                    option(value="Artificial intelligence") Artificial intelligence
+                    option(value="app devlopment") App devlopment
+                    option(value="Digital marketing") Digital marketing
+                    option(value="project planing") project planing
+                span select gender
+                .radio
+                    input(type="radio", name="gender", value="male", id="male")
+                    label(for="male") male
+                    input(type="radio", name="gender", value="female", id="female")
+                    label(for="female") female
+                input(type="submit", value="send message", class="btn", name="send")

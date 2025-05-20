@@ -1,0 +1,108 @@
+extends ./layout/main.pug
+block link
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css")
+    link(rel="stylesheet", href="/css/swiper-bundle.min.css")
+block content 
+    section.home#home
+        .row
+            .content
+                h3 online 
+                    span education
+                a.btn(href="#contact") contact us
+            .image
+                img(src="/img/img1.svg", alt="")
+            
+        section.count
+            .box-container
+                .box
+                    i.fas.fa-graduation-cap
+                    h3 150+
+                    p courses
+            .box-container
+                .box
+                    i.fas.fa-user-graduate
+                    h3 1300+
+                    p students
+            .box-container
+                .box
+                    i.fas.fa-chalkboard-user
+                    h3 80+
+                    p teachers
+            .box-container
+                .box
+                    i.fas.fa-face-smile
+                    h3 100%
+                    p satisfication
+
+        section.teachers#teachers
+            h1.heading expert 
+                span tutors
+            .swiper.teacher-slider
+                .swiper-wrapper
+                    .swiper-slide.slide
+                        img(src="/img/pexels-katerina-holmes-5905483.jpg", alt="#")
+                        .share
+                            a(href="#", class="fab fa-facebook")
+                            a(href="#", class="fab fa-instagram")
+                            a(href="#", class="fab fa-linkedin")
+                        h3 Miss Davis
+                    .swiper-slide.slide
+                        img(src="/img/pexels-max-fischer-5212361.jpg", alt="")
+                        .share
+                            a(href="#", class="fab fa-facebook")
+                            a(href="#", class="fab fa-twitter")
+                            a(href="#", class="fab fa-instagram")
+                            a(href="#", class="fab fa-linkedin")
+                        h3 Mr.Smith
+                    .swiper-slide.slide
+                        img(src="/img/pexels-vanessa-garcia-6326377.jpg", alt="")
+                        .share
+                            a(href="#", class="fab fa-facebook")
+                            a(href="#", class="fab fa-twitter")
+                            a(href="#", class="fab fa-instagram")
+                            a(href="#", class="fab fa-linkedin")
+                        h3 Mrs.Johnson
+                    .swiper-slide.slide
+                        img(src="/img/pexels-ron-lach-7967588.jpg", alt="")
+                        .share
+                            a(href="#", class="fab fa-facebook")
+                            a(href="#", class="fab fa-twitter")
+                            a(href="#", class="fab fa-instagram")
+                            a(href="#", class="fab fa-linkedin")
+                        h3 Mrs.Taylor
+                .swiper-pagination
+
+        section.reviews#reviews
+            h1.heading student's 
+                span reviews 
+            if  index.length > 0
+             
+                .swiper.reviews-slider
+                    .swiper-wrapper
+                        for res in index
+                                    .swiper-slide.slide
+                                        p #{res.data}
+                                        .user
+                                            img(src="/img/profile.png", alt="")
+                                            .user-info
+                                                h3 #{res.name}
+                                                .starts
+                                                    i.fas.fa-star
+                                                    i.fas.fa-star
+                                                    i.fas.fa-star
+                                                    i.fas.fa-star
+                                                    i.fas.fa-star-half-alt
+                
+                    .swiper-pagination
+        section.enter_review 
+            h1.heading Give Us 
+                span reviews 
+            div.reviewbox
+                form(action="/add-review", method="post")
+                  
+                    input(type="text",name="name",class="box",placeholder="name")
+                    br
+                    textarea.box(name="review", cols="30", rows="5",placeholder="Enter review") 
+                    br    
+                    input.btn(type="submit", value="Submit") 

@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Autour+One&family=Pacifico&family=Rubik&family=Skranji&family=Young+Serif&display=swap');
+
+*{
+    font-family: 'Rubik',sans-sarif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+.ai_main{
+    
+    display: flex;
+    justify-content: center; /* Horizontally center the items */
+    align-items: center;
+    /* text-align: center; */
+    
+}
+
+.ai_main p{
+    border: #c1b1a3 1px solid;
+    height: 600px;
+    width: 90rem;
+    margin-top: 2rem;
+    padding: 30px;
+    font-size: 22px;
+    
+  
+
+}
+.ai_input_box{
+    margin-left: 30rem;
+    margin-right: 10px;
+    padding: 10px;
+    height: 30px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+
+}
+section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.header{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+z-index: 1000;
+    background-color: rgb(101, 99, 99);
+}
+.header .flex{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.header .flex .logo{
+    font-size: 2.5rem;
+    color:#FF9740;
+
+}
+.header .flex .navbar a{
+
+    margin-left: 2rem;
+    color: rgb(165, 145, 117);
+    font-size: 2rem;
+
+}
+.header .flex .navbar a:hover{
+    color: #FF9740;
+}
+#menu-btn{
+    cursor: pointer;
+    color: rgb(165, 145, 117);
+    font-size: 2.5rem;
+    display: none;
+}
+
+
+
+.home{
+    margin-top: 6rem;
+}
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+
+}
+.home .row .content{
+    flex: 1 1 40rem;
+    text-align: center;
+}
+.home .row .image{
+    flex: 1 1 40rem;
+    
+}
+.home .row .image img{
+      width: 100%;    
+}
+.home .row .content h3{
+    margin-bottom: 1rem;
+    font-size: 10rem;
+    color: #FF9740;
+}
+.home .row .content h3 span{
+    color: rgb(101, 99, 99);
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    border-color: #FF9740;
+    color: white;
+    background-color:  rgb(101, 99, 99);
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+}
+.btn:hover{
+    background-color:#FF9740;
+}
+
+.count {
+  
+    display: flex;
+ color: white;
+ flex-wrap: wrap;
+    justify-content: space-around;
+    
+    
+}
+.count .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minma(27rem,1fr));
+   gap: 1.5rem;
+   align-items: flex-start;
+
+padding: 1rem;
+}
+.count .box-container .box{
+ border-radius: .5rem;
+ padding: 2rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 1.5rem;
+ background-color:  rgb(101, 99, 99);
+
+
+}
+
+.count .box-container .box i{
+    font-size: 5rem;
+
+}
+.count .box-container .box .content h3{
+    font-size: 2rem;
+    
+}
+.count .box-container .box .content p{
+    font-size: 1.6rem;
+    
+}
+
+
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+
+}
+.about .row .image{
+    flex: 1 1 40rem;
+
+}
+.about .row .image img {
+    width: 100%;
+}
+.about .row .content{
+    text-align: center;
+    flex: 1  1 40rem;
+}
+.about .row .content h3{
+  font-size: 3rem;
+
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+  padding: 1rem 0;
+  line-height: 2;
+  }
+
+ .heading{
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 4rem;
+
+ }
+ .heading span{
+    color: #FF9740;
+
+ }
+ .courses .slide{
+    width: 30rem;
+    border-radius: .5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color:rgb(121, 119, 119);
+
+ }
+ .courses .slide img{
+    height: 25rem;
+    width: 100%;
+ }
+
+ .courses .slide h3{
+    margin: 1.5rem 0;
+    font-size: 2rem;
+
+ }
+ .courses .slide p{
+    font-size: 1.6rem;
+    line-height: 2;
+ }
+
+.teachers .slide{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+}
+.teachers .slide img{
+    height: 40rem;
+    width: 85%;
+    border-radius: .5rem;
+   
+
+}
+
+.teachers .slide h3{
+margin-top: 1.5rem;
+font-size: 2rem;
+
+}
+.teachers .slide .share{
+    position: absolute;
+    top: 1rem;
+    left: -10rem;
+
+
+
+}
+.teachers .slide:hover .share{
+    left: 2rem;
+}
+.teachers .slide .share a{
+display: block;
+margin-top: 1rem;
+height: 4.5rem;
+width: 4.5rem;
+line-height: 4.5rem;
+border-radius: .5rem;
+color: white;
+
+background-color:rgb(121, 119, 119);
+text-align: center;
+font-size: 2rem;
+
+
+}
+.teachers .slide .share a:hover{
+background-color:#FF9740;
+
+}
+
+.reviews-slider .slide{
+    width: 35rem;
+    border-radius: .5rem;
+    background-color:rgb(121, 119, 119);
+padding: 2rem;
+margin-bottom: 4rem;
+
+}
+
+.reviews-slider .slide p{
+    line-height: 2rem;
+    font-size: 1.6rem;
+}
+.reviews-slider .slide .user{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: .5rem;
+
+}
+.reviews-slider .slide img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviews-slider .slide .user h3{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: .7rem;
+}
+ 
+.reviews-slider .slide .user .starts i{
+    font-size: 1.5rem;
+    color: #FF9740;
+}
+
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+
+}
+
+.contact .row .image{
+
+    flex: 1 1 40rem;
+
+}
+.contact .row form {
+flex: 1 1 40rem;
+
+}
+.contact .row form .box{
+width: 100%;
+margin-top: 1rem;
+margin-bottom: 1rem;
+border-radius: .5rem;
+font-size: 1.8rem;
+color: black;
+padding: 1.4rem;
+text-transform: none;
+}
+.contact .reviews-slider form span{
+    font-size: 1.5 rem;
+}
+
+.contact .row form .radio{
+    margin-top: 2rem;
+
+}
+.contact .row form .radio label {
+    font-size: 2rem;
+    margin-left: .5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.contact .row form .radio #female {
+margin-left: 2rem;
+}
+.contact .row form .radio input {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+.contact .row form .radio #female:checked ~ label[for="female"] {
+color: #FF9740;
+}
+.contact .row form .radio #male:checked ~ label[for="male"] {
+    color: #FF9740;
+    }
+    
+
+.footer  {
+    background-color:rgb(121, 119, 119);
+    text-align: center;
+    
+}
+.footer .share a{
+    margin:0 .3rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 2.5rem;
+    color: white;
+
+}
+.footer .share a:hover{
+    background-color: #FF9740;
+    border-radius: 50%;
+}
+
+.footer .credit{
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    border-top: .1rem solid white;
+    font-size: 2rem;
+
+
+}
+
+.footer .credit span{
+    color: #FF9740;
+}
+
+ .responcebox{
+    border: black 2px solid;
+    margin-bottom: 2rem;
+   
+    width: 50rem;
+    border-radius: 10px;
+    padding: 10px;
+} 
+
+
+.flexres{
+    display: flex;
+
+}
+.flexres h2{
+    padding-left: 10px;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.grid {
+    padding-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+ .reviewbox{
+    display: flex;
+    justify-content: center; /* Horizontally center the items */
+    align-items: center;
+    text-align: center;
+ }
+ .reviewbox input{
+    border: solid rgb(202, 121, 35) 2.4px;
+    margin-bottom: 10px;
+    width: 50rem;
+    height: 5rem;
+    border-radius: 2rem;
+    padding-left: 10px;
+
+ }
+ .reviewbox textarea {
+    height: 10rem;
+    width:  50rem;
+    border: solid rgb(202, 121, 35) 2.4px;
+    border-radius: 1rem;
+    padding: 10px;
+    
+ }
+  
+.centerresponce{
+   
+    /* text-align: center; */
+    padding: 100px;
+    align-items: center;
+}
+
+
+
+
+
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+.home .row .content h3{
+font-size: 8rem;
+
+
+}
+}
+
+@media (max-width:769px) {
+   #menu-btn{
+    display: inline-block;
+   }
+   #menu-btn.fa-times{
+    transform: rotate(180deg);
+   }
+
+   .header .flex .navbar{
+    position:absolute;
+    top: 99%;
+    left: 0%; right: 0;
+    border-top: .1rem solid;
+    border-bottom: .1rem solid;
+  clip-path: polygon(0 0,100% 0 , 100% 0 , 0 0);
+
+   }
+   .header .flex .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+background-color:#ccc5c0   }
+   .header .flex .navbar a{
+    display: block;
+    margin:2rem;
+   
+
+    }
+    .home .row .content h3{
+        font-size: 5rem;
+        
+        
+        }
+}
+
+
+@media (max-width:459px) {
+    html{
+        font-size: 50%;
+    }
+.count .box-container{
+ width: 100vw;
+}
+}
+
+
+
+/* styles.css */
+
+/* styles.css */
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quiz-progress {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .progress-circle-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .progress-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-circle span {
+    font-size: 2rem;
+    color: #FF9740;
+  }
+  
+  .circle-background {
+    stroke: #eee;
+    stroke-width: 10;
+    fill: none;
+  }
+  
+  .circle-foreground {
+    stroke: #FF9740;
+    stroke-width: 10;
+    fill: none;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dashoffset 0.3s ease;
+  }
+  
+  
+  
+  .quiz-form {
+    text-align: left;
+  }
+  
+  h1 {
+    font-size: 2.7rem;
+    color: #FF9740;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .question {
+    margin-bottom: 25px;
+  }
+  
+  .question p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  
+  .question label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .question input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #FF9740;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #FF9740;
+  }
+  
+  .result-message {
+    text-align: center;
+    font-size: 1.5rem;
+    color:#FF9740;
+    margin-top: 20px;
+  }
+  
+
+  .pass {
+    color: green;
+    font-weight: bold;
+  }
+  .fail {
+    color: red;
+    font-weight: bold;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  p {
+    font-size: 18px;
+  }

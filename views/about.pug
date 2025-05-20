@@ -1,0 +1,14 @@
+extends ./layout/main.pug
+block link
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css")
+    link(rel="stylesheet", href="/css/swiper-bundle.min.css")
+block content 
+    section.about#about
+        .row
+            .image
+                    img.abt-img(src="/img/Shrug-bro.svg", alt="")
+            .content
+                    h3 why choose us?
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse iure non sit facere porro itaque praesentium amet at cum nesciunt blanditiis cumque, quos quisquam sed vitae laboriosam harum ducimus beatae.
+                    a.btn(href="#contact") contact us

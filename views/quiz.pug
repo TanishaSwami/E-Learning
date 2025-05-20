@@ -1,0 +1,83 @@
+extends ./layout/main.pug
+block link
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css")
+    link(rel="stylesheet", href="/css/swiper-bundle.min.css")
+block content 
+
+  body
+    .quiz-container
+      .quiz-progress
+        .progress-circle-container
+          svg.progress-circle(width="150" height="150")
+            circle.circle-background(cx="75" cy="75" r="70")
+            circle.circle-foreground(cx="75" cy="75" r="70" stroke-dasharray="440" stroke-dashoffset="440" id="progress-circle")
+          span#progress-text 0%
+
+      .quiz-form
+        h1 Quiz Assessment
+
+        form#quiz-form(action="/submit-quiz" method="POST")
+          .question
+            p What is the correct syntax to declare a variable in C?
+            label
+              input(type="radio" name="q1" value="int variableName;" class="quiz-answer") 
+              span int variableName;
+            label
+              input(type="radio" name="q1" value="nt:variableName;" class="quiz-answer")
+              span nt:variableName;
+            label
+              input(type="radio" name="q1" value="variableName:int;" class="quiz-answer")
+              span variableName:int;
+
+          .question
+            p Which function is used to print something to the screen in C?
+            label
+              input(type="radio" name="q2" value="echo()" class="quiz-answer")
+              span echo()
+            label
+              input(type="radio" name="q2" value="printf()" class="quiz-answer")
+              span printf()
+            label
+              input(type="radio" name="q2" value="cout <<" class="quiz-answer")
+              span cout <<
+
+          .question
+            p How do you write a comment in C?
+            label
+              input(type="radio" name="q3" value="// This is a comment" class="quiz-answer")
+              span // This is a comment
+            label
+              input(type="radio" name="q3" value="/* This is a comment */" class="quiz-answer")
+              span /* This is a comment */
+            label
+              input(type="radio" name="q3" value="Both of the above" class="quiz-answer")
+              span Both of the above
+
+          .question
+            p Which data type is used to create a variable that should store text in C?
+            label
+              input(type="radio" name="q4" value="char" class="quiz-answer")
+              span char
+            label
+              input(type="radio" name="q4" value="word" class="quiz-answer")
+              span word
+            label
+              input(type="radio" name="q4" value="string" class="quiz-answer")
+              span string
+
+          .question
+            p What is the correct syntax to include a header file in C?
+            label
+              input(type="radio" name="q5" value='#include "filename"' class="quiz-answer")
+              span #include "filename"
+            label
+              input(type="radio" name="q5" value='#include <filename>' class="quiz-answer")
+              span #include <filename>
+            label
+              input(type="radio" name="q5" value='#include [filename]' class="quiz-answer")
+              span #include [filename]
+
+          button(type="submit") Submit
+
+        .result-message#result-message
